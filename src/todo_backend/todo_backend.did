@@ -1,3 +1,8 @@
 service : {
-    "greet": (text) -> (text) query;
+    "add_note" : (text) -> (variant {Ok: null; Err: text});
+    "get_notes": () -> (vec record {
+        id: nat8;
+        content: text;
+    });
+    "delete_note": (nat8) -> (variant {Ok: null; Err: text});
 }
